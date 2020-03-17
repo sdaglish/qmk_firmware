@@ -11,6 +11,8 @@
 
 #define SFT_ESC  SFT_T(KC_ESC)
 #define CTL_BSPC CTL_T(KC_BSPC)
+#define RS_BSPC  LT(_RAISE, KC_BSPC)
+#define LW_SPC  LT(_LOWER, KC_SPC)
 #define ALT_SPC  ALT_T(KC_SPC)
 #define SFT_ENT  SFT_T(KC_ENT)
 
@@ -43,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                    '------+------' '------+------'
  *                                    | tab  | raise| | END  | lower |
  *                                    '------+------' '------+------'
- *                                    | Lower|  ~   | | GUI  | Raise|
+ *                             ŋ       | Lower|  ~   | | GUI  | Raise|
  *                                    '------+------' '------+------'
  */
 
@@ -53,9 +55,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_SCLN, KC_Q,    KC_J,    KC_K, KC_X,                                     KC_B, KC_M, KC_W,    KC_V,   KC_Z, \
            KC_LBRC, KC_RBRC,                                                             KC_MINS, KC_EQL,       \
   
-  					SFT_ESC, CTL_BSPC,  ALT_SPC, SFT_ENT,					\
-  					KC_TAB,   RAISE,    LOWER,   KC_DEL,					\
-  					LOWER,   KC_TAB,    KC_LGUI, RAISE
+  SFT_ESC, RS_BSPC,      LW_SPC, SFT_ENT,			\
+  KC_TAB,  KC_LCTL ,     KC_RALT, KC_DEL,			\
+  LOWER,   KC_TAB,       KC_LGUI, RAISE
 ),
 
 /* Raise
@@ -113,7 +115,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_F1,   KC_F2,  KC_F3,   KC_F4,  KC_F5,                            KC_F6,   KC_F7,    KC_F8,   KC_F9,   KC_F10,  \
   KC_1,    KC_2,   KC_3,    KC_4,   KC_5,                             KC_6,    KC_7,     KC_8,    KC_9,    KC_0,    \
   KC_EXLM, S(KC_2),S(KC_3), KC_DLR, KC_PERC,                          KC_CIRC, KC_AMPR,  KC_ASTR, KC_LPRN, KC_RPRN, \
-           KC_F11, KC_F12,                                                               ____,    ____,             \
+  KC_F11, KC_F12,                                                               S(KC_MINS),    ____, \
                                              ____, ____,  ____, ____,                                               \
                                              ____, ____,  ____, ____,                                               \
                                              ____, ____,  ____, ____                                                \
