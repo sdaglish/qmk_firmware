@@ -40,12 +40,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *        '------+------'-------------'                             '-------------'------+------'
  *                      | ESC  |  BS  |                             | SPACE|ENTER |
  *                      |  +   |   +  |                             |  +   |  +   |
- *                      | SHIFT| CTRL |                             | ALT  |SHIFT |
+ *                      | SHIFT| RAISE|                             | LOWER|SHIFT |
  *                      '------+------'                             '------+------'
  *                                    '------+------' '------+------'
- *                                    | tab  | raise| | END  | lower |
+ *                                    | tab  | CTRL | | ALT  | DEL  |
  *                                    '------+------' '------+------'
- *                             ŋ       | Lower|  ~   | | GUI  | Raise|
+ *                                    | Lower|  ~   | | GUI  | Raise|
  *                                    '------+------' '------+------'
  */
 
