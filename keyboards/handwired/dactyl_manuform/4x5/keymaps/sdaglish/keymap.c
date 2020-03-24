@@ -15,6 +15,7 @@
 #define LW_SPC  LT(_LOWER, KC_SPC)
 #define ALT_SPC  ALT_T(KC_SPC)
 #define SFT_ENT  SFT_T(KC_ENT)
+#define LCTL_TAB CTL_T(KC_TAB)
 
 #define KC_ML KC_MS_LEFT
 #define KC_MR KC_MS_RIGHT
@@ -44,6 +45,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                      '------+------'                             '------+------'
  *                                    '------+------' '------+------'
  *                                    | tab  | CTRL | | ALT  | DEL  |
+ *                                              +
+ *                                             tab
  *                                    '------+------' '------+------'
  *                                    | Lower|  ~   | | GUI  | Raise|
  *                                    '------+------' '------+------'
@@ -56,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            KC_LBRC, KC_RBRC,                                                             KC_MINS, KC_EQL,       \
   
   SFT_ESC, RS_BSPC,      LW_SPC, SFT_ENT,			\
-  KC_TAB,  KC_LCTL ,     KC_LALT, KC_DEL,			\
+  KC_TAB,  LCTL_TAB,     KC_LALT, KC_DEL,			\
   LOWER,   KC_TAB,       KC_LGUI, RAISE
 ),
 
