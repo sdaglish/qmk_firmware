@@ -1,4 +1,6 @@
 /*
+This is the c configuration file for the keymap
+
 Copyright 2012 Jun Wako <wakojun@gmail.com>
 Copyright 2015 Jack Humbert
 
@@ -18,27 +20,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
+/* Use I2C or Serial, not both */
+#define USE_SERIAL
+// #define USE_I2C
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x3060
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    tshort
-#define DESCRIPTION     A split keyboard for the cheap makers
+/* Select hand configuration */
 
-/* key matrix size */
-// Rows are doubled-up
-#define MATRIX_ROWS 8
-#define MATRIX_COLS 6
-
-// row-driven
-#define MATRIX_ROW_PINS {F6, F7, B1, B3}
-#define MATRIX_COL_PINS { D4, C6, D7, E6, B4, B5 }
-
-/* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION COL2ROW
-
-// WS2812 RGB LED strip input and number of LEDs
-#define RGB_DI_PIN D3
-#define RGBLED_NUM 12
+#define MASTER_LEFT
+// #define MASTER_RIGHT
+// #define EE_HANDS
